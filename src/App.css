@@ -1,0 +1,11 @@
+.app {
+  height: 100vh;
+  display: flex;
+}
+.container {
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid gray;
+  margin: auto;
+}
