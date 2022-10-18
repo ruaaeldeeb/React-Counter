@@ -1,29 +1,28 @@
-import { useState } from "react";
 import "./App.css";
-import Counter from "./components/counter";
-import "./components/counterActioons";
-import CounterActions from "./components/counterActioons";
+import Counter from "./components/counter/counter";
+// import "./components/counter/counterActioons";
+// import CounterActions from "./components/counter/counterActioons";
+import Navbarcontainer from "./components/navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Products from "./components/products";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Details from "./components/products/datails";
 
 function App() {
-  let [number, setNum] = useState(0);
-  const decreaseNum = () => {
-    if (number > 0) {
-      setNum(--number);
-    }
-  };
-  const increaseNum = () => {
-    setNum(++number);
-  };
   return (
-    <div className="app">
-      <div className="container">
-        <Counter num={number}></Counter>
-        <CounterActions
-          decreaseNum={decreaseNum}
-          increaseNum={increaseNum}
-        ></CounterActions>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Navbarcontainer />
+
+      <Routes>
+        <Route path="/" element={<Products />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/counter" element={<Counter />}></Route>
+        <Route path="/products/:id" element={<Details />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
