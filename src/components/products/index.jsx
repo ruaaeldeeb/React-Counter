@@ -31,7 +31,6 @@ function Products() {
               <Card.Img variant="top" src={product.image} className="img" />
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
                 <Card.Text>{product.price}$</Card.Text>
                 <Card.Text> ratting: {product.rating.rate}</Card.Text>
                 <Link
@@ -41,7 +40,7 @@ function Products() {
                   Go Details
                 </Link>
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary mx-3"
                   onClick={() => addToCartCounter(product)}
                 >
                   Add To Cart

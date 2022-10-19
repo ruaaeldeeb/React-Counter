@@ -33,6 +33,9 @@ function Navbarcontainer() {
             <Nav.Link>
               <Link to="/counter">Counter</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/signup">SignUp</Link>
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
