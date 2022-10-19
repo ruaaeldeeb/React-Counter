@@ -1,4 +1,4 @@
-.btn {
+.bt {
   padding: 10px 30px;
   background-color: gray;
   color: white;
@@ -6,4 +6,7 @@
   margin-right: 10px;
   border-radius: 8px;
   cursor: pointer;
+}
+.container {
+  margin: auto;
 }

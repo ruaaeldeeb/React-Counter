@@ -1,11 +1,10 @@
 import "./App.css";
 import Counter from "./components/counter/counter";
-// import "./components/counter/counterActioons";
-// import CounterActions from "./components/counter/counterActioons";
 import Navbarcontainer from "./components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from "./components/products";
+import Cart from "./components/cart";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Details from "./components/products/datails";
@@ -17,6 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Products />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/counter" element={<Counter />}></Route>

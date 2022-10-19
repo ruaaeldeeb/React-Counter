@@ -1,0 +1,9 @@
+.prod {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.img {
+  width: 200px;
+  height: 200;
+}
